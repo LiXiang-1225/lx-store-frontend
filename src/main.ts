@@ -3,5 +3,18 @@ import './style.css'
 import App from './App.vue'
 import router from "./router";
 import store from "./store";
+import 'vant/lib/index.css';
+import { Button,Form, Field, CellGroup } from 'vant';
 
-createApp(App).use(router).use(store).mount('#app')
+const app = createApp(App);
+
+app.use(Button);
+app.use(Form);
+app.use(Field);
+app.use(CellGroup);
+
+app.use(router);
+app.use(store);
+app.mount('#app')
+
+// createApp(App).use(router).use(store).mount('#app')
